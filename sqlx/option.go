@@ -25,7 +25,7 @@ func WithPostgres(config database.Config) OptFunc {
 func WithMysql(config database.Config) OptFunc {
 	return func(s *sqlxdb) (err error) {
 		s.driver = "mysql"
-		s.dsn = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s",
+		s.dsn = fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?parseTime=true",
 			config.User,
 			config.Password,
 			config.Host,
