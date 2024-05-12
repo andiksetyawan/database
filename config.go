@@ -5,6 +5,5 @@ type Config struct {
 	User     string
 	Host     string
 	Port     string
-	SSLMode  string
 	Password string
 }
